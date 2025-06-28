@@ -10,7 +10,7 @@
 - hosts: slave2
   become: yes
   tasks:
-    - name: Install Nginx
+    - name: Install Nginx 
       apt:
         name: nginx
         update_cache: yes
