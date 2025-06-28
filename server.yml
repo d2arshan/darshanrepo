@@ -1,0 +1,17 @@
+- hosts: slave1
+  become: yes
+  tasks:
+    - name: Install Apache
+      apt:
+        name: apache2
+        update_cache: yes
+        state: present
+
+- hosts: slave2
+  become: yes
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        update_cache: yes
+        state: present
